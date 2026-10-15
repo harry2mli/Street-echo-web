@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#07131f">
+  <meta name="description" content="Street Echo — Barcelone V1, prototype web 3D jouable.">
+  <title>Street Echo — Barcelone V1</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading" class="overlay">
+    <div class="panel">
+      <div class="brand">STREET <span>ECHO</span></div>
+      <p>BARCELONE · VERSION WEB V1</p>
+      <div class="loader"></div>
+      <small id="load-status">Préparation de la ville…</small>
+    </div>
+  </div>
+  <div id="start-screen" class="overlay hidden">
+    <div class="panel menu-panel">
+      <div class="brand">STREET <span>ECHO</span></div>
+      <h1>Barcelone V1</h1>
+      <p>Prototype 3D jouable · Optimisé mobile</p>
+      <button id="play-btn">JOUER</button>
+      <button id="resume-btn" class="secondary">REPRENDRE</button>
+      <p class="hint">Démo de construction : ville stylisée, conduite et exploration libre.</p>
+    </div>
+  </div>
+  <div id="hud" class="hidden">
+    <div class="topbar">
+      <div class="brand small">STREET <span>ECHO</span></div>
+      <div class="hud-chip">BARCELONE <b>V1</b></div>
+      <button id="pause-btn" aria-label="Pause">Ⅱ</button>
+    </div>
+    <div id="mission-card"><b>EXPLORATION LIBRE</b><small id="mission-text">Découvre la ville et rejoins le point bleu.</small></div>
+    <div id="toast"></div>
+    <div class="controls">
+      <div class="dpad">
+        <button data-key="forward" class="up">▲</button>
+        <button data-key="left" class="left">◀</button>
+        <button data-key="back" class="down">▼</button>
+        <button data-key="right" class="right">▶</button>
+      </div>
+      <div class="actions">
+        <button id="interact-btn">ENTRER<br>VOITURE</button>
+        <button id="change-view-btn">CAMÉRA</button>
+      </div>
+    </div>
+    <div id="vehicle-label">À PIED</div>
+  </div>
+  <div id="error" class="overlay hidden"><div class="panel"><h2>Impossible de charger le moteur 3D</h2><p id="error-text">Vérifie la connexion Internet puis recharge la page.</p><button onclick="location.reload()">Réessayer</button></div></div>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

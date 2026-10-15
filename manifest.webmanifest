@@ -1,0 +1,12 @@
+{
+  "name": "Street Echo — Barcelone V1",
+  "short_name": "Street Echo",
+  "description": "Prototype de jeu 3D en monde ouvert dans Barcelone.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#07131f",
+  "theme_color": "#07131f",
+  "icons": []
+}
